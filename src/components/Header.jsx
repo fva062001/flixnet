@@ -12,7 +12,7 @@ function Header() {
     return (
       <>
         <div
-          className="relative z-10 mx-auto mt-16 rounded-2xl border-[0.1px]  border-[#49524f]"
+          className="relative z-10 mx-auto mt-24 rounded-2xl border-[0.1px]  border-[#49524f]"
           style={{
             width: "90vw",
             height: "60vh",
@@ -29,11 +29,14 @@ function Header() {
               src={vikingsLogo}
               alt="VikingsLogo"
             />
+            <p className="text-[#b2b7ca] mb-4 mx-auto text-center font-extralight text-sm w-10/12">
+              Drama ⦁ Action ⦁ Violence
+            </p>
             <div className="flex flex-row justify-around   ">
-              <button className="w-5/12 text-black bg-white hover:bg-opacity-50 font-semibold text-xl  py-2 rounded-lg">
+              <button className="w-5/12 text-black bg-white hover:bg-opacity-50 font-semibold text-lg  py-1 rounded-lg">
                 <IoIosPlay className="inline" /> Play
               </button>
-              <button className="w-5/12 bg-[#4f4f50] bg-opacity-50 hover:bg-opacity-50 font-semibold  text-white text-xl  py-2 rounded-lg">
+              <button className="w-5/12 bg-[#4f4f50] bg-opacity-50 hover:bg-opacity-50 font-semibold  text-white text-lg  py-1 rounded-lg">
                 <IoMdInformationCircleOutline className="inline" /> More Info
               </button>
             </div>
