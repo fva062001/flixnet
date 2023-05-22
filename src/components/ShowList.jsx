@@ -28,9 +28,9 @@ function ShowList() {
   }
 
   return (
-    <div className="relative z-20 mt-[-15vh] w-fit mx-12">
+    <div className="relative z-20 lg:mt-[-15vh] xl:mt-[-15vh] md:mt-[-15vh] mt-10 w-fit mx-16">
       <h1 className="text-[#e5e5e5] mb-2 text-xl">All the shows</h1>
-      <div className=" grid grid-cols-7 gap-6 w-fit">
+      <div className=" grid lg:grid-cols-7 2xl:grid-cols-10 md:grid-cols-4 grid-cols-3 gap-3 lg:gap-6 2xl:gap-8 w-fit">
         {shows !== null &&
           shows.map((show) => {
             return (
