@@ -15,7 +15,7 @@ function LandingPage() {
   return (
     <>
       <Header />
-      <div className="lg:mt-[-15vh] xl:mt-[-15vh] md:mt-[-15vh] mt-4 ">
+      <div className="lg:mt-[-15vh] xl:mt-[-15vh] md:mt-[-15vh] mt-4 mx-16">
         <ShowList
           title={"All the shows"}
           query={`https://www.episodate.com/api/most-popular?page=${page}`}

@@ -18,9 +18,9 @@ function ShowDetail() {
     return <p>Loading...</p>;
   }
   return (
-    <>
-      <h1 className="text-white mt-20">{show.name}</h1>
-    </>
+    <div className=" mt-28 mx-16">
+      <h1 className="text-white">{show.name}</h1>
+    </div>
   );
 }
 

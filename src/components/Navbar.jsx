@@ -42,7 +42,7 @@ function Navbar() {
           ? "bg-gradient-to-b from-black via-black-opacity-20 to-[#141414]"
           : "bg-gradient-to-b from-black via-black-opacity-20 to-transparent"
       }`}>
-      <div className="flex flex-row  lg:mx-16 xl:mx-16 w-full justify-between mx-6 my-auto">
+      <div className="flex flex-row lg:mx-16 xl:mx-16 w-full justify-between mx-6 my-auto">
         <div className="my-auto">
           <Link to={"/"}>
             <img
