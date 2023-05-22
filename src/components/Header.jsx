@@ -16,9 +16,9 @@ function Header() {
           style={{
             width: "90vw",
             height: "60vh",
-            background: `linear-gradient(to top, rgba(18, 20, 20, 1) 0%, rgba(20, 20, 20, 0.5) 80%, rgba(0, 0, 0, 0) 100%), url(${bgResponsiveImage})`,
+            background: `linear-gradient(to top, rgba(18, 20, 20, 1) 0%, rgba(20, 20, 20, 0.5) 80%, rgba(0, 0, 0, 0) 100%), url(${bgResponsiveImage}) no-repeat 50% 35%`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "top",
           }}>
           <div className="bottom-4 absolute left-1/2 -translate-x-1/2 w-full">
             <h2 className="text-white font-extralight text-xl text-center">
