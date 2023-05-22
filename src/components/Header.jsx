@@ -1,5 +1,6 @@
 import React from "react";
 import backgroundImage from "/public/images/landingBackground.jpg";
+import bgResponsiveImage from "/public/images/landingResponsiveBg.jpeg";
 import vikingsLogo from "/public/images/specific/vikingsLogo.png";
 import {IoIosPlay, IoMdInformationCircleOutline} from "react-icons/io";
 import useMediaQuery from "use-media-query-hook";
@@ -14,8 +15,8 @@ function Header() {
           className="relative z-10 mx-auto mt-16 rounded-2xl border-[0.1px]  border-[#49524f]"
           style={{
             width: "90vw",
-            height: "80vh",
-            background: `linear-gradient(to top, rgba(18, 20, 20, 1) 0%, rgba(20, 20, 20, 0.5) 80%, rgba(0, 0, 0, 0) 100%), url(${backgroundImage})`,
+            height: "60vh",
+            background: `linear-gradient(to top, rgba(18, 20, 20, 1) 0%, rgba(20, 20, 20, 0.5) 80%, rgba(0, 0, 0, 0) 100%), url(${bgResponsiveImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}>
