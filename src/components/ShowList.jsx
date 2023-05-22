@@ -36,7 +36,7 @@ function ShowList({title, query, previousPage, nextPage}) {
   }
 
   return (
-    <div className="relative z-20 w-fit lg:mx-16 mx-6 2xl:mx-auto">
+    <div className="relative z-20 w-fit">
       <h1 className="text-[#e5e5e5] mb-2 text-xl">{title}</h1>
       <div className=" grid lg:grid-cols-7 2xl:grid-cols-8  md:grid-cols-4 grid-cols-3 gap-3 lg:gap-6 2xl:gap-8 w-fit">
         {shows !== null &&

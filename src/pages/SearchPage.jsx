@@ -16,7 +16,7 @@ function SearchPage() {
   };
 
   return (
-    <div className="mt-28 mx-16">
+    <div className="mt-28 lg:mx-16 mx-6 2xl:mx-auto">
       <ShowList
         title={"Shows found"}
         query={`https://www.episodate.com/api/search?q=${params.searchParam}&page=${page}`}
