@@ -7,7 +7,7 @@ function ErrorPage() {
 
   return (
     <div
-      className="w-[100vw] bg-center bg-cover mt-24 relative"
+      className="w-[100vw] bg-center bg-cover mt-20 relative"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)) , url(${errorPageBackground})`,
         minHeight: "calc(100vh - 4rem)",

@@ -45,7 +45,7 @@ function ShowList({title, query, previousPage, nextPage}) {
               return (
                 <div
                   onClick={() => {
-                    console.log(show.id);
+                    navigate(`/show/${show.id}`);
                   }}
                   id={show.id}
                   key={show.id}
