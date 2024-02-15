@@ -1,5 +1,5 @@
-import React from "react";
-import LoadingCard from "./LoadingCard";
+import React from 'react';
+import LoadingCard from './LoadingCard';
 
 function ShowLoadingList() {
   return (

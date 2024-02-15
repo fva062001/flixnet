@@ -1,6 +1,13 @@
-import React from "react";
+import React from 'react';
 
-function ShowCard({background, title, onClick, id}) {
+type ShowCardProps = {
+  background: string;
+  title: string;
+  onClick: (id: number) => void;
+  id: number;
+};
+
+function ShowCard({ background, title, onClick, id }: ShowCardProps) {
   const handleClick = () => {
     onClick(id);
   };

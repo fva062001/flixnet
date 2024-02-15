@@ -1,16 +1,24 @@
-import React, {useState} from "react";
-import useSWR from "swr";
-import ShowCard from "./ShowCard";
-import {MdPlayArrow} from "react-icons/md";
-import {CiWarning} from "react-icons/ci";
-import ShowLoadingList from "./ShowLoadingList";
-import {useNavigate} from "react-router-dom";
+'use client';
+import React, { useState } from 'react';
+import useSWR from 'swr';
+import ShowCard from './ShowCard';
+import { MdPlayArrow } from 'react-icons/md';
+import { CiWarning } from 'react-icons/ci';
+import ShowLoadingList from './ShowLoadingList';
+import { useRouter } from 'next/navigation';
 
-function ShowList({title, query, previousPage, nextPage}) {
-  const navigate = useNavigate();
+type ShowListProps = {
+  title: string;
+  query: string;
+  previousPage: () => void;
+  nextPage: () => void;
+};
+
+function ShowList({ title, query, previousPage, nextPage }: ShowListProps) {
+  const router = useRouter();
   const [shows, setShows] = useState(null);
   const [pages, setPages] = useState(1);
-  const {data, isLoading} = useSWR(query, (url) =>
+  const { data, isLoading } = useSWR(query, (url) =>
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -19,8 +27,8 @@ function ShowList({title, query, previousPage, nextPage}) {
       })
   );
 
-  const handleShowClick = (e) => {
-    navigate(`/show/${e}`);
+  const handleShowClick = (e: any) => {
+    router.push(`/show/${e}`);
   };
 
   const handlePrevious = () => {
@@ -40,12 +48,12 @@ function ShowList({title, query, previousPage, nextPage}) {
       <h1 className="text-[#e5e5e5] mb-2 text-xl">{title}</h1>
       <div className=" grid lg:grid-cols-7 2xl:grid-cols-8  md:grid-cols-4 grid-cols-3 gap-3 lg:gap-6 2xl:gap-8 w-fit">
         {shows !== null &&
-          shows.map((show) => {
-            if (show.image_thumbnail_path === "https://static.episodate.com") {
+          shows.map((show: any) => {
+            if (show.image_thumbnail_path === 'https://static.episodate.com') {
               return (
                 <div
                   onClick={() => {
-                    navigate(`/show/${show.id}`);
+                    router.push(`/show/${show.id}`);
                   }}
                   id={show.id}
                   key={show.id}
