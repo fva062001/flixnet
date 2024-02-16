@@ -4,10 +4,6 @@ on:
   push:
     branches:
       - main
-    branches-ignore:
-      - feature/*
-      - bugfix/*
-      - release/*
 
 jobs:
   hello_world:
