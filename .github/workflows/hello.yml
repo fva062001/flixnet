@@ -1,0 +1,17 @@
+name: Say hello
+
+on:
+  push:
+    branches:
+      - main
+    branches-ignore:
+      - feature/*
+      - bugfix/*
+      - release/*
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo the message
+        run: echo "Hello, world!"
