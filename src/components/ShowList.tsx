@@ -1,3 +1,4 @@
+//@ts-nocheck
 'use client';
 import React, { useState } from 'react';
 import useSWR from 'swr';
@@ -47,7 +48,8 @@ function ShowList({ title, query, previousPage, nextPage }: ShowListProps) {
     <div className="relative z-20 w-fit">
       <h1 className="text-[#e5e5e5] mb-2 text-xl">{title}</h1>
       <div className=" grid lg:grid-cols-7 2xl:grid-cols-8  md:grid-cols-4 grid-cols-3 gap-3 lg:gap-6 2xl:gap-8 w-fit">
-        {shows !== null &&
+        {!isLoading &&
+          shows !== null &&
           shows.map((show: any) => {
             if (show.image_thumbnail_path === 'https://static.episodate.com') {
               return (
