@@ -12,7 +12,7 @@ function Navbar() {
   const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-  const searchInputRef = useRef();
+  const searchInputRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
@@ -29,8 +29,9 @@ function Navbar() {
     };
   }, []);
 
-  const handleSearch = (e: Event) => {
+  const handleSearch = (e: any) => {
     e.preventDefault();
+    //@ts-ignore
     const inputValue = searchInputRef.current.value;
     setShowSearch(false);
     router.push(`/search/${inputValue}`);
@@ -71,11 +72,11 @@ function Navbar() {
             <form
               onSubmit={handleSearch}
               className="my-auto">
-              <div class="relative">
+              <div className="relative">
                 <input
                   ref={searchInputRef}
                   type="text"
-                  class="block w-full py-3 px-10 my-auto text-sm border rounded-lg bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-[#db202c]"
+                  className="block w-full py-3 px-10 my-auto text-sm border rounded-lg bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-[#db202c]"
                   placeholder="Search show"
                 />
                 <button
