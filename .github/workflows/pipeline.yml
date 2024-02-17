@@ -13,11 +13,13 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
         node-version: [16,17,18]
     steps:
+      - name: Running on ${{matrix.os}} with Node.js ${{matrix.node-version}}
+        run: echo "Running on ${{matrix.os}} with Node.js ${{matrix.node-version}}"
       - name: Checkout code
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Set up Node.js
+      - name: Set up Node.js ${{matrix.node-version}}
         uses: actions/setup-node@v4
         with:
           node-version: ${{matrix.node-version}}
