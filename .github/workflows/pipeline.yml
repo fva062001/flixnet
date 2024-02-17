@@ -10,8 +10,8 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        node-version: [16,17,18]
+        os: [ubuntu-latest, windows-latest]
+        node-version: [17,18]
     steps:
       - name: Running on ${{matrix.os}} with Node.js ${{matrix.node-version}}
         run: echo "Running on ${{matrix.os}} with Node.js ${{matrix.node-version}}"
