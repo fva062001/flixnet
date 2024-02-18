@@ -29,3 +29,8 @@ jobs:
         run: npm run lint
       - name: Build
         run: npm run build
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: dir
