@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import useSWR from 'swr';
 import { useRouter } from 'next/navigation';
-import ShowList from '../../components/common/ShowList';
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 
@@ -22,28 +21,11 @@ function SearchPage() {
   return (
     <Suspense>
       <div className="mt-28 lg:mx-16 mx-6 2xl:mx-auto">
-        <ShowListComponent
-          nextPage={nextPage}
-          previousPage={previousPage}
-          page={page}
-        />
+        <h1>Working on it</h1>
       </div>
     </Suspense>
   );
 }
 
-function ShowListComponent({ nextPage, previousPage, page }: any) {
-  const searchParams = useSearchParams();
-  const searchParam = searchParams.get('query');
-
-  return (
-    <ShowList
-      title={'Shows found'}
-      query={`https://www.episodate.com/api/search?q=${searchParam}&page=${page}`}
-      nextPage={nextPage}
-      previousPage={previousPage}
-    />
-  );
-}
 
 export default SearchPage;
