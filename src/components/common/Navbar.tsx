@@ -48,14 +48,14 @@ function Navbar() {
         <div className="my-auto">
           <Link href={'/'}>
             <img
-              className="hidden lg:inline xl:inline h-12"
+              className="hidden lg:inline h-8"
               src={flixnetLogo.src}
               alt=""
             />
           </Link>
           <Link href={'/'}>
             <img
-              className="inline lg:hidden xl:hidden h-16"
+              className="inline lg:hidden h-10"
               src={flixnetLogoResponsive.src}
               alt=""
             />
@@ -88,7 +88,7 @@ function Navbar() {
             </form>
           )}
           <img
-            className="rounded-lg lg:h-12 xl:h-12 h-16"
+            className="rounded-lg lg:h-10 hidden"
             src={flixnetUserIcon.src}
             alt="UserIcon"
           />

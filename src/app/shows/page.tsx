@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import useSWR from 'swr';
 import { useRouter } from 'next/navigation';
-import ShowList from '@/components/ShowList';
+import ShowList from '../../components/common/ShowList';
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 
