@@ -14,7 +14,7 @@ function ErrorPage() {
         minHeight: 'calc(100vh - 4rem)',
       }}>
       <div className="absolute text-center space-y-6 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 ">
-        <h1 className="text-white font-extrabold lg:text-6xl xl:text-6xl md:text-6xl text-4xl drop-shadow-2xl">
+        <h1 className="text-white font-extrabold lg:text-6xl xl:text-6xl md:text-6xl text-4xl ">
           Where you going?
         </h1>
         <p className="text-white font-light text-xl lg:w-6/12 xl:w-6/12 w-12/12 mx-auto">

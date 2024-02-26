@@ -20,19 +20,17 @@ function Header() {
   return (
     <>
       <div
-        className="relative z-10 hidden lg:inline-block"
+        className="relative z-10 hidden lg:inline-block h-screen w-full"
         style={{
-          width: '100vw',
-          height: '100vh',
           background: `linear-gradient(to top, rgba(20, 20, 20, 1) 0%, rgba(20, 20, 20, 0.3) 80%, rgba(0, 0, 0, 0) 100%), url(https://image.tmdb.org/t/p/original/${randomMovie?.backdrop_path}) no-repeat center`,
           backgroundSize: 'cover',
         }}>
-        <div className="px-16 h-full">
-          <div className="absolute top-1/2 -translate-y-1/2 space-y-8">
+        <div className="mx-16 h-full relative">
+          <div className="absolute top-1/2 -translate-y-1/2 space-y-8 ">
             <h2 className="text-white font-extralight text-4xl">
               <span className="font-semibold">FLIXNET</span> ORIGINAL
             </h2>
-            <h1 className="font-bold text-white text-8xl h-100">
+            <h1 className="font-bold text-white text-8xl">
               {randomMovie.title}
             </h1>
 

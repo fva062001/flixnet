@@ -39,7 +39,7 @@ function Navbar() {
 
   return (
     <div
-      className={`text-white top-0 z-30 lg:h-20 xl:h-20 h-24 w-full fixed flex flex-row justify-between ${
+      className={`text-white top-0 z-30 lg:h-20 xl:h-20 h-24 w-screen fixed flex flex-row justify-between ${
         isScrolled === true
           ? 'bg-gradient-to-b from-black via-black-opacity-20 to-[#141414]'
           : 'bg-gradient-to-b from-black via-black-opacity-20 to-transparent'
